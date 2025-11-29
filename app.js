@@ -7,8 +7,8 @@ console.log(mostrarInfoFlecha());
 const biblioteca = new BibliotecaService();
 console.log(biblioteca.infoSistema());
 
-biblioteca.agregarLibro("Cien años de soledad", "García Márquez", "123456");
-biblioteca.registrarUsuario("Ana Torres", "001");
+biblioteca.agregarLibro("Los juegos del hambre", "Suzane Collis", "123456");
+biblioteca.registrarUsuario("Estephany Vanessa Delgadillo Salgado", "001");
 
 const libroDemo = Libro.crearLibroDemo();
 biblioteca.libros.push(libroDemo);
@@ -25,8 +25,8 @@ biblioteca.buscarUsuarioPorNombre("ana", resultados => {
 
 const prestamo = biblioteca.registrarPrestamo("123456", "001");
 if (prestamo) {
-  // Simulamos que el préstamo se realizó hace 20 días
-  prestamo.fechaPrestamo = new Date(Date.now() - 20 * 24 * 60 * 60 * 1000);
+  
+prestamo.fechaPrestamo = new Date(Date.now() - 20 * 24 * 60 * 60 * 1000);
   
   console.log("\nPréstamo registrado:");
   console.log(prestamo.infoPrestamo());
